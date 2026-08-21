@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pace AI — Your AI Companion for Everyday Productivity and Creativity</title>
+  <meta name="description" content="Pace AI is an all-in-one AI companion designed to help you chat with AI, create images, work with files and photos, and stay focused with Focus Mode—all in one place.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Ambient Effects -->
+  <div class="ambient-glow"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="Pace AI Home">
+        <img src="assets/logo.png" alt="Pace AI Official Logo" class="brand-logo-img">
+        <span class="brand-name">Pace <span class="brand-accent">AI</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#features" class="nav-link">Capabilities</a>
+        <a href="#focus" class="nav-link">Focus Mode</a>
+        <a href="#vision" class="nav-link">Vision</a>
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="mailto:sreerag@paceai.in" class="btn btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>Support</span>
+        </a>
+        <button class="btn btn-primary open-modal-btn">
+          <span>Get Pace AI</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      
+      <div class="section-container hero-container">
+        <div class="hero-content">
+          <div class="tag-pill fade-in">
+            <span class="pill-pulse"></span>
+            <span class="pill-text">ALL-IN-ONE AI COMPANION</span>
+          </div>
+
+          <h1 class="hero-title fade-in delay-1">
+            Your AI Companion for<br>
+            <span class="title-highlight">Everyday Productivity & Creativity.</span>
+          </h1>
+
+          <p class="hero-subtitle fade-in delay-2">
+            Pace AI brings powerful AI tools into one convenient app—helping you chat, create images, work with files and photos, and stay focused throughout your day without constantly switching between different apps. Pace AI also features Focus Mode, helping you stay focused on what you're doing by blocking distracting apps for hours at your convenience.
+          </p>
+
+          <div class="hero-cta-group fade-in delay-3">
+            <button class="btn btn-primary btn-large open-modal-btn">
+              <span>Get Pace AI</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33331 8H12.6666M12.6666 8L8.00002 3.33334M12.6666 8L8.00002 12.6667" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <a href="#features" class="btn btn-secondary btn-large">
+              <span>Explore Features</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- HERO BRAND LOGO EMBLEM SHOWCASE -->
+        <div class="hero-visual-frame fade-in delay-3">
+          <div class="logo-showcase-card">
+            <div class="logo-ring-ambient"></div>
+            <img src="assets/logo.png" alt="Pace AI Logo Emblem" class="hero-logo-large">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">01 // ABOUT PACE AI</div>
+          <h2 class="section-title">Pace AI is an AI-powered companion designed to make everyday tasks faster, simpler, and more productive.</h2>
+          <p class="section-description">
+            Pace AI brings powerful AI tools into one convenient app, helping users chat with AI, create images, work with files and photos, generate creative content, and stay focused throughout the day with Focus Mode—blocking distracting apps according to your convenience.
+          </p>
+          <p class="section-description" style="margin-top: 1rem;">
+            Whether you need help understanding something, creating content, brainstorming ideas, or getting quick assistance while using your device, Pace AI is built to keep everything in one place—so you can spend less time switching between apps and more time getting things done.
+          </p>
+        </div>
+
+        <!-- 5 Core Pillars -->
+        <div class="pillars-grid">
+          <div class="pillar-card" data-pillar="chat">
+            <div class="pillar-header">
+              <span class="pillar-num">01</span>
+              <div class="pillar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Chat & Understand</h3>
+            <p class="pillar-text">Ask questions, clarify complex ideas, and get instant answers tailored to your context.</p>
+            <div class="pillar-accent-line"></div>
+          </div>
+
+          <div class="pillar-card" data-pillar="image">
+            <div class="pillar-header">
+              <span class="pillar-num">02</span>
+              <div class="pillar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Create Images & Media</h3>
+            <p class="pillar-text">Generate creative visuals from prompts and work directly with your photos and graphics.</p>
+            <div class="pillar-accent-line"></div>
+          </div>
+
+          <div class="pillar-card" data-pillar="files">
+            <div class="pillar-header">
+              <span class="pillar-num">03</span>
+              <div class="pillar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Files & Documents</h3>
+            <p class="pillar-text">Upload documents, summarize long texts, and extract insights without leaving your workspace.</p>
+            <div class="pillar-accent-line"></div>
+          </div>
+
+          <div class="pillar-card" data-pillar="focus">
+            <div class="pillar-header">
+              <span class="pillar-num">04</span>
+              <div class="pillar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Focus Mode & App Blocker</h3>
+            <p class="pillar-text">Block any apps that distract your valuable time. Set custom schedules for blocking apps according to your convenience and stay in peak productivity.</p>
+            <div class="pillar-accent-line"></div>
+          </div>
+
+          <div class="pillar-card pillar-card-wide" data-pillar="allinone">
+            <div class="pillar-header">
+              <span class="pillar-num">05</span>
+              <div class="pillar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">One Convenient App</h3>
+            <p class="pillar-text">Everything you need in one place—eliminating app clutter, multiple subscriptions, and constant context switching.</p>
+            <div class="pillar-accent-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL-IN-ONE CAPABILITIES SECTION -->
+    <section class="features-section" id="features">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">02 // ALL-IN-ONE CAPABILITIES</div>
+          <h2 class="section-title">Built for everything you do every day.</h2>
+          <p class="section-description">
+            Pace AI consolidates your essential everyday AI tools into a single, intuitive experience so you can move smoothly from idea to execution.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Intelligent AI Chat</h3>
+            <p class="feature-desc">Have natural conversations, solve problems, analyze complex topics, or get quick assistance right on your device.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Image, Video & Audio Creation</h3>
+            <p class="feature-desc">Generate high-quality AI images, videos, and audio content effortlessly at an affordable price.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">File & Document Intelligence</h3>
+            <p class="feature-desc">Interact directly with PDFs, spreadsheets, and notes. Ask questions about your documents in real-time.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Focus Mode & App Blocker</h3>
+            <p class="feature-desc">Block any apps that distract your valuable time. Set custom blocking schedules according to your convenience so you can stay focused on your productivity and relax.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI Video & Content Generator</h3>
+            <p class="feature-desc">Create amazing high-quality videos with audio and subtitles for short-form and long-form content.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">On-Device Quick Assistance</h3>
+            <p class="feature-desc">Access Pace AI whenever you need a fast answer or quick assist while working across your device.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS MODE SPOTLIGHT SECTION -->
+    <section class="focus-section" id="focus">
+      <div class="section-container">
+        <div class="focus-banner">
+          <div class="focus-glow-bg"></div>
+          <div class="focus-content-grid">
+            <div class="focus-text-col">
+              <div class="section-mono-tag">03 // FOCUS MODE & APP BLOCKER</div>
+              <h2 class="section-title">Block distracting apps.<br><span class="accent-text">Protect your valuable time & stay focused.</span></h2>
+              <p class="section-description">
+                Pace AI's built-in Focus Mode helps block any apps that distract your valuable time. Set custom time durations for blocking apps according to your convenience, stay focused on your productivity throughout the day, and relax when it's time to recharge.
+              </p>
+              
+              <div class="focus-rhythms">
+                <div class="rhythm-chip active">
+                  <span class="chip-dot"></span>
+                  <span>Deep Work Flow</span>
+                </div>
+                <div class="rhythm-chip">
+                  <span class="chip-dot"></span>
+                  <span>Mindful Relaxation</span>
+                </div>
+                <div class="rhythm-chip">
+                  <span class="chip-dot"></span>
+                  <span>App Blocker Active</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="focus-visual-col">
+              <div class="focus-card">
+                <div class="focus-timer-display">
+                  <span class="timer-value">25:00</span>
+                  <span class="timer-label">APP BLOCKER ACTIVE · TIME SET</span>
+                </div>
+                <div class="focus-bar">
+                  <div class="focus-progress"></div>
+                </div>
+                <p class="focus-quote">"Pace AI blocks any distracting apps so you can protect your valuable time and focus on your productivity."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY PACE AI / VISION SECTION -->
+    <section class="why-section" id="vision">
+      <div class="section-container">
+        <div class="why-grid">
+          <div class="why-content-col">
+            <div class="section-mono-tag">04 // THE VISION</div>
+            <h2 class="section-title">Spend less time switching apps.<br>Spend more time getting things done.</h2>
+            <p class="section-description">
+              Most people waste hours every day toggling between separate chat tools, image generators, document readers, and focus apps. 
+            </p>
+            <p class="section-description">
+              Pace AI brings everything together into one unified experience so your thoughts flow continuously from quick idea to finished product.
+            </p>
+            
+            <div class="philosophy-checklist">
+              <div class="check-item">
+                <div class="check-icon">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span>One app for chat, images, documents & focus</span>
+              </div>
+              <div class="check-item">
+                <div class="check-icon">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span>Quick on-device assistance whenever you need it</span>
+              </div>
+              <div class="check-item">
+                <div class="check-icon">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span>Seamless transition between productivity & relaxation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-interactive-col">
+            <div class="interactive-switch-card">
+              <div class="switch-tabs">
+                <button class="switch-tab active" data-tab="pace">Pace AI All-in-One</button>
+                <button class="switch-tab" data-tab="traditional">Scattered Apps</button>
+              </div>
+
+              <div class="switch-content active" id="tab-pace">
+                <div class="concept-badge">UNIFIED CONVENIENCE</div>
+                <h4 class="concept-title">Everything in one intuitive space</h4>
+                <p class="concept-text">Chat with AI, generate images, work with files, and trigger Focus Mode without leaving the app.</p>
+                
+                <div class="concept-metrics">
+                  <div class="metric-box">
+                    <span class="metric-val">1</span>
+                    <span class="metric-lbl">Unified App</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-val">100%</span>
+                    <span class="metric-lbl">Flow & Focus</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="switch-content" id="tab-traditional">
+                <div class="concept-badge badge-muted">SCATTERED WORKFLOW</div>
+                <h4 class="concept-title">Constant app switching & distraction</h4>
+                <p class="concept-text">Juggling subscriptions, copying text between windows, and losing momentum throughout the day.</p>
+                
+                <div class="concept-metrics">
+                  <div class="metric-box">
+                    <span class="metric-val">5+</span>
+                    <span class="metric-lbl">Separate Tools</span>
+                  </div>
+                  <div class="metric-box">
+                    <span class="metric-val">High</span>
+                    <span class="metric-lbl">Cognitive Overhead</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND VISION BANNER -->
+    <section class="vision-section" id="brand-vision">
+      <div class="section-container">
+        <div class="vision-banner">
+          <div class="vision-bg-glow"></div>
+          <div class="section-mono-tag text-center">05 // BRAND VISION</div>
+          
+          <blockquote class="vision-quote">
+            “Our vision is to provide high-quality AI image, video, and audio creation alongside productivity features at an affordable price.”
+          </blockquote>
+
+          <p class="vision-statement">
+            Pace AI is built for people who want to think faster, create more, learn effortlessly, and stay centered in an increasingly noisy digital world.
+          </p>
+
+          <div class="vision-pillars">
+            <div class="vision-item">
+              <span class="vision-dot"></span>
+              <span class="vision-label">Everyday Assistance</span>
+            </div>
+            <div class="vision-item">
+              <span class="vision-dot"></span>
+              <span class="vision-label">Creative Freedom</span>
+            </div>
+            <div class="vision-item">
+              <span class="vision-dot"></span>
+              <span class="vision-label">Focus & Flow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING SECTION -->
+    <section class="closing-section" id="closing">
+      <div class="section-container text-center">
+        <div class="closing-box">
+          <div class="closing-glow"></div>
+          <div class="section-mono-tag">GET STARTED</div>
+          
+          <h2 class="closing-headline">Meet Pace AI.</h2>
+          <p class="closing-subhead">Your AI companion for everyday productivity and creativity.</p>
+          
+          <div class="closing-actions">
+            <button class="btn btn-primary btn-large open-modal-btn">
+              <span>Get Pace AI</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33331 8H12.6666M12.6666 8L8.00002 3.33334M12.6666 8L8.00002 12.6667" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <img src="assets/logo.png" alt="Pace AI Logo" class="footer-logo-img">
+          <span class="brand-name">Pace <span class="brand-accent">AI</span></span>
+        </a>
+        <p class="footer-tagline">Your AI companion for everyday productivity and creativity.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="mailto:sreerag@paceai.in" class="footer-link">Support</a>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; <span id="year">2026</span> Paceaitechnologies (OPC) Private Limited. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- GET PACE AI MODAL -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-body" id="modal-form-view">
+        <div class="modal-logo-wrap">
+          <img src="assets/logo.png" alt="Pace AI Logo" class="modal-logo-img">
+        </div>
+        <div class="section-mono-tag">EARLY ACCESS</div>
+        <h3 class="modal-title">Get Pace AI</h3>
+        <p class="modal-text">Join the priority roster to get instant access to the all-in-one AI companion for your everyday life.</p>
+        
+        <form id="access-form" class="modal-form">
+          <div class="input-group">
+            <input type="email" id="email-input" class="modal-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-input">
+              <span>Get Pace AI</span>
+            </button>
+          </div>
+          <span class="input-hint">No spam. Only early access invitations and updates.</span>
+        </form>
+      </div>
+
+      <div class="modal-body hidden" id="modal-success-view">
+        <div class="success-icon-wrap">
+          <img src="assets/logo.png" alt="Pace AI Logo" class="success-logo-img">
+        </div>
+        <h3 class="modal-title">Welcome to Pace AI</h3>
+        <p class="modal-text">You're on the early access roster. We'll send your access link directly to your inbox.</p>
+        <button class="btn btn-secondary btn-full" id="modal-done-btn">Back to Website</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
