@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pace AI — Your AI Companion for Everyday Productivity and Creativity</title>
-  <meta name="description" content="Pace AI is an all-in-one AI companion designed to help you chat with AI, create images, work with files and photos, and stay focused with Focus Mode—all in one place.">
+  
+  <!-- SEO & Metadata -->
+  <title>Slipe AI — AI Photo & Video Enhancer</title>
+  <meta name="description" content="Create high-quality AI images and enhance your photos and videos with Slipe AI. Preserve natural facial details, skin texture, and original clarity effortlessly.">
+  <meta name="keywords" content="Slipe AI, AI photo enhancer, AI video enhancer, AI image generator, AI photo enhancement, AI image creation, photo quality enhancer, AI image enhancer">
+  <link rel="canonical" href="https://paceai.in/">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Slipe AI — AI Photo & Video Enhancer">
+  <meta property="og:description" content="Create stunning AI images and enhance your photos and videos with Slipe AI while keeping your photos natural and true to the original.">
+  <meta property="og:image" content="assets/portrait-enhanced.jpg">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -14,29 +24,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Background Ambient Effects -->
+  <!-- Subtle Ambient Backdrop -->
   <div class="ambient-glow"></div>
   <div class="ambient-grid"></div>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- NAVIGATION BAR -->
   <header class="site-header" id="header">
     <div class="header-container">
-      <a href="#" class="brand-logo" aria-label="Pace AI Home">
-        <img src="assets/logo.png" alt="Pace AI Official Logo" class="brand-logo-img">
-        <span class="brand-name">Pace <span class="brand-accent">AI</span></span>
+      <a href="#" class="brand-logo" aria-label="Slipe AI Home">
+        <img src="assets/logo.png" alt="Slipe AI Emblem" class="brand-logo-img">
+        <span class="brand-name">Slipe <span class="brand-accent">AI</span></span>
       </a>
 
       <nav class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#features" class="nav-link">Capabilities</a>
-        <a href="#focus" class="nav-link">Focus Mode</a>
-        <a href="#vision" class="nav-link">Vision</a>
-        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#ai-images" class="nav-link">AI Images</a>
+        <a href="#photo-enhancement" class="nav-link">Photo Enhancement</a>
+        <a href="#video-enhancement" class="nav-link">Video Enhancement</a>
+        <a href="#examples" class="nav-link">Examples</a>
       </nav>
 
       <div class="nav-actions">
@@ -48,11 +58,31 @@
           <span>Support</span>
         </a>
         <button class="btn btn-primary open-modal-btn">
-          <span>Get Pace AI</span>
+          <span>Try Slipe AI</span>
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3.33331 8H12.6666M12.6666 8L8.00002 3.33334M12.6666 8L8.00002 12.6667" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#ai-images" class="mobile-nav-link">AI Images</a>
+        <a href="#photo-enhancement" class="mobile-nav-link">Photo Enhancement</a>
+        <a href="#video-enhancement" class="mobile-nav-link">Video Enhancement</a>
+        <a href="#examples" class="mobile-nav-link">Examples</a>
+        <a href="privacy.html" class="mobile-nav-link">Privacy Policy</a>
+      </nav>
+      <div class="mobile-nav-actions">
+        <button class="btn btn-primary btn-full open-modal-btn">Try Slipe AI</button>
       </div>
     </div>
   </header>
@@ -60,407 +90,424 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero-section" id="hero">
-      <canvas id="hero-canvas" class="hero-canvas"></canvas>
-      
       <div class="section-container hero-container">
         <div class="hero-content">
           <div class="tag-pill fade-in">
             <span class="pill-pulse"></span>
-            <span class="pill-text">ALL-IN-ONE AI COMPANION</span>
+            <span class="pill-text">AI PHOTO & VIDEO ENHANCEMENT</span>
           </div>
 
           <h1 class="hero-title fade-in delay-1">
-            Your AI Companion for<br>
-            <span class="title-highlight">Everyday Productivity & Creativity.</span>
+            Create. Enhance.<br>
+            <span class="title-highlight">Transform.</span>
           </h1>
 
           <p class="hero-subtitle fade-in delay-2">
-            Pace AI brings powerful AI tools into one convenient app—helping you chat, create images, work with files and photos, and stay focused throughout your day without constantly switching between different apps. Pace AI also features Focus Mode, helping you stay focused on what you're doing by blocking distracting apps for hours at your convenience.
+            Create stunning AI images and enhance your photos and videos with Slipe AI. Restore sharpness, clarity, and detail while keeping your images looking natural and true to the original.
           </p>
 
           <div class="hero-cta-group fade-in delay-3">
-            <button class="btn btn-primary btn-large open-modal-btn">
-              <span>Get Pace AI</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.33331 8H12.6666M12.6666 8L8.00002 3.33334M12.6666 8L8.00002 12.6667" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="https://play.google.com/store/apps/details?id=com.paceai.paceai" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-1.442V3.256c0-.555.228-1.056.609-1.442zM15.206 13.414l2.766 2.766-12.75 7.361 9.984-10.127zM15.206 10.586L5.222.459l12.75 7.361-2.766 2.766zM19.387 11.233l2.84 1.64c.77.445.77 1.166 0 1.611l-2.84 1.64-2.868-2.868 2.868-2.868z"/>
               </svg>
-            </button>
+              <span>Get it on Google Play</span>
+            </a>
             <a href="#features" class="btn btn-secondary btn-large">
-              <span>Explore Features</span>
+              <span>Explore features</span>
             </a>
           </div>
         </div>
 
-        <!-- HERO BRAND LOGO EMBLEM SHOWCASE -->
-        <div class="hero-visual-frame fade-in delay-3">
-          <div class="logo-showcase-card">
-            <div class="logo-ring-ambient"></div>
-            <img src="assets/logo.png" alt="Pace AI Logo Emblem" class="hero-logo-large">
+        <!-- HERO INTERACTIVE BEFORE/AFTER SHOWCASE -->
+        <div class="hero-showcase-wrapper fade-in delay-3">
+          <div class="before-after-card" id="hero-slider-card">
+            <div class="ba-image-layer ba-after-layer">
+              <img src="assets/portrait-enhanced.jpg" alt="Enhanced Photo with Slipe AI — High Clarity Natural Detail">
+              <span class="ba-badge badge-enhanced">ENHANCED</span>
+            </div>
+            <div class="ba-image-layer ba-before-layer" id="hero-before-layer">
+              <img src="assets/portrait-enhanced.jpg" alt="Original Photo before Slipe AI Enhancement" class="image-original-filter">
+              <span class="ba-badge badge-original">ORIGINAL</span>
+            </div>
+            <div class="ba-slider-handle" id="hero-slider-handle">
+              <div class="handle-line"></div>
+              <div class="handle-button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"/>
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </div>
+              <div class="handle-line"></div>
+            </div>
+          </div>
+          <div class="showcase-caption">
+            <span class="caption-icon">✦</span>
+            <span>Natural skin texture, hair, and facial identity preserved</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
-      <div class="section-container">
-        <div class="section-header text-center">
-          <div class="section-mono-tag">01 // ABOUT PACE AI</div>
-          <h2 class="section-title">Pace AI is an AI-powered companion designed to make everyday tasks faster, simpler, and more productive.</h2>
-          <p class="section-description">
-            Pace AI brings powerful AI tools into one convenient app, helping users chat with AI, create images, work with files and photos, generate creative content, and stay focused throughout the day with Focus Mode—blocking distracting apps according to your convenience.
-          </p>
-          <p class="section-description" style="margin-top: 1rem;">
-            Whether you need help understanding something, creating content, brainstorming ideas, or getting quick assistance while using your device, Pace AI is built to keep everything in one place—so you can spend less time switching between apps and more time getting things done.
-          </p>
-        </div>
-
-        <!-- 5 Core Pillars -->
-        <div class="pillars-grid">
-          <div class="pillar-card" data-pillar="chat">
-            <div class="pillar-header">
-              <span class="pillar-num">01</span>
-              <div class="pillar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="pillar-title">Chat & Understand</h3>
-            <p class="pillar-text">Ask questions, clarify complex ideas, and get instant answers tailored to your context.</p>
-            <div class="pillar-accent-line"></div>
-          </div>
-
-          <div class="pillar-card" data-pillar="image">
-            <div class="pillar-header">
-              <span class="pillar-num">02</span>
-              <div class="pillar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="8.5" cy="8.5" r="1.5"/>
-                  <polyline points="21 15 16 10 5 21"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="pillar-title">Create Images & Media</h3>
-            <p class="pillar-text">Generate creative visuals from prompts and work directly with your photos and graphics.</p>
-            <div class="pillar-accent-line"></div>
-          </div>
-
-          <div class="pillar-card" data-pillar="files">
-            <div class="pillar-header">
-              <span class="pillar-num">03</span>
-              <div class="pillar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <polyline points="14 2 14 8 20 8"/>
-                  <line x1="16" y1="13" x2="8" y2="13"/>
-                  <line x1="16" y1="17" x2="8" y2="17"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="pillar-title">Files & Documents</h3>
-            <p class="pillar-text">Upload documents, summarize long texts, and extract insights without leaving your workspace.</p>
-            <div class="pillar-accent-line"></div>
-          </div>
-
-          <div class="pillar-card" data-pillar="focus">
-            <div class="pillar-header">
-              <span class="pillar-num">04</span>
-              <div class="pillar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <circle cx="12" cy="12" r="6"/>
-                  <circle cx="12" cy="12" r="2"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="pillar-title">Focus Mode & App Blocker</h3>
-            <p class="pillar-text">Block any apps that distract your valuable time. Set custom schedules for blocking apps according to your convenience and stay in peak productivity.</p>
-            <div class="pillar-accent-line"></div>
-          </div>
-
-          <div class="pillar-card pillar-card-wide" data-pillar="allinone">
-            <div class="pillar-header">
-              <span class="pillar-num">05</span>
-              <div class="pillar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-            </div>
-            <h3 class="pillar-title">One Convenient App</h3>
-            <p class="pillar-text">Everything you need in one place—eliminating app clutter, multiple subscriptions, and constant context switching.</p>
-            <div class="pillar-accent-line"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ALL-IN-ONE CAPABILITIES SECTION -->
+    <!-- FEATURE SECTION (3 MAJOR FEATURE CARDS) -->
     <section class="features-section" id="features">
       <div class="section-container">
         <div class="section-header text-center">
-          <div class="section-mono-tag">02 // ALL-IN-ONE CAPABILITIES</div>
-          <h2 class="section-title">Built for everything you do every day.</h2>
+          <div class="section-mono-tag">CORE CAPABILITIES</div>
+          <h2 class="section-title">Built for high-definition creativity and enhancement.</h2>
           <p class="section-description">
-            Pace AI consolidates your essential everyday AI tools into a single, intuitive experience so you can move smoothly from idea to execution.
+            Slipe AI provides studio-grade AI tools designed to generate new visual ideas and bring unprecedented clarity to existing photos and videos.
           </p>
         </div>
 
-        <div class="features-grid">
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Intelligent AI Chat</h3>
-            <p class="feature-desc">Have natural conversations, solve problems, analyze complex topics, or get quick assistance right on your device.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Image, Video & Audio Creation</h3>
-            <p class="feature-desc">Generate high-quality AI images, videos, and audio content effortlessly at an affordable price.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">File & Document Intelligence</h3>
-            <p class="feature-desc">Interact directly with PDFs, spreadsheets, and notes. Ask questions about your documents in real-time.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Focus Mode & App Blocker</h3>
-            <p class="feature-desc">Block any apps that distract your valuable time. Set custom blocking schedules according to your convenience so you can stay focused on your productivity and relax.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2B474" stroke-width="2">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">AI Video & Content Generator</h3>
-            <p class="feature-desc">Create amazing high-quality videos with audio and subtitles for short-form and long-form content.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2596BE" stroke-width="2">
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">On-Device Quick Assistance</h3>
-            <p class="feature-desc">Access Pace AI whenever you need a fast answer or quick assist while working across your device.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOCUS MODE SPOTLIGHT SECTION -->
-    <section class="focus-section" id="focus">
-      <div class="section-container">
-        <div class="focus-banner">
-          <div class="focus-glow-bg"></div>
-          <div class="focus-content-grid">
-            <div class="focus-text-col">
-              <div class="section-mono-tag">03 // FOCUS MODE & APP BLOCKER</div>
-              <h2 class="section-title">Block distracting apps.<br><span class="accent-text">Protect your valuable time & stay focused.</span></h2>
-              <p class="section-description">
-                Pace AI's built-in Focus Mode helps block any apps that distract your valuable time. Set custom time durations for blocking apps according to your convenience, stay focused on your productivity throughout the day, and relax when it's time to recharge.
-              </p>
-              
-              <div class="focus-rhythms">
-                <div class="rhythm-chip active">
-                  <span class="chip-dot"></span>
-                  <span>Deep Work Flow</span>
-                </div>
-                <div class="rhythm-chip">
-                  <span class="chip-dot"></span>
-                  <span>Mindful Relaxation</span>
-                </div>
-                <div class="rhythm-chip">
-                  <span class="chip-dot"></span>
-                  <span>App Blocker Active</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="focus-visual-col">
-              <div class="focus-card">
-                <div class="focus-timer-display">
-                  <span class="timer-value">25:00</span>
-                  <span class="timer-label">APP BLOCKER ACTIVE · TIME SET</span>
-                </div>
-                <div class="focus-bar">
-                  <div class="focus-progress"></div>
-                </div>
-                <p class="focus-quote">"Pace AI blocks any distracting apps so you can protect your valuable time and focus on your productivity."</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY PACE AI / VISION SECTION -->
-    <section class="why-section" id="vision">
-      <div class="section-container">
-        <div class="why-grid">
-          <div class="why-content-col">
-            <div class="section-mono-tag">04 // THE VISION</div>
-            <h2 class="section-title">Spend less time switching apps.<br>Spend more time getting things done.</h2>
-            <p class="section-description">
-              Most people waste hours every day toggling between separate chat tools, image generators, document readers, and focus apps. 
-            </p>
-            <p class="section-description">
-              Pace AI brings everything together into one unified experience so your thoughts flow continuously from quick idea to finished product.
-            </p>
-            
-            <div class="philosophy-checklist">
-              <div class="check-item">
-                <div class="check-icon">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <span>One app for chat, images, documents & focus</span>
-              </div>
-              <div class="check-item">
-                <div class="check-icon">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <span>Quick on-device assistance whenever you need it</span>
-              </div>
-              <div class="check-item">
-                <div class="check-icon">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.3333 4L6 11.3333L2.66667 8" stroke="#E2B474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <span>Seamless transition between productivity & relaxation</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="why-interactive-col">
-            <div class="interactive-switch-card">
-              <div class="switch-tabs">
-                <button class="switch-tab active" data-tab="pace">Pace AI All-in-One</button>
-                <button class="switch-tab" data-tab="traditional">Scattered Apps</button>
-              </div>
-
-              <div class="switch-content active" id="tab-pace">
-                <div class="concept-badge">UNIFIED CONVENIENCE</div>
-                <h4 class="concept-title">Everything in one intuitive space</h4>
-                <p class="concept-text">Chat with AI, generate images, work with files, and trigger Focus Mode without leaving the app.</p>
-                
-                <div class="concept-metrics">
-                  <div class="metric-box">
-                    <span class="metric-val">1</span>
-                    <span class="metric-lbl">Unified App</span>
-                  </div>
-                  <div class="metric-box">
-                    <span class="metric-val">100%</span>
-                    <span class="metric-lbl">Flow & Focus</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="switch-content" id="tab-traditional">
-                <div class="concept-badge badge-muted">SCATTERED WORKFLOW</div>
-                <h4 class="concept-title">Constant app switching & distraction</h4>
-                <p class="concept-text">Juggling subscriptions, copying text between windows, and losing momentum throughout the day.</p>
-                
-                <div class="concept-metrics">
-                  <div class="metric-box">
-                    <span class="metric-val">5+</span>
-                    <span class="metric-lbl">Separate Tools</span>
-                  </div>
-                  <div class="metric-box">
-                    <span class="metric-val">High</span>
-                    <span class="metric-lbl">Cognitive Overhead</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BRAND VISION BANNER -->
-    <section class="vision-section" id="brand-vision">
-      <div class="section-container">
-        <div class="vision-banner">
-          <div class="vision-bg-glow"></div>
-          <div class="section-mono-tag text-center">05 // BRAND VISION</div>
+        <div class="major-features-grid">
           
-          <blockquote class="vision-quote">
-            “Our vision is to provide high-quality AI image, video, and audio creation alongside productivity features at an affordable price.”
+          <!-- FEATURE CARD 01: CREATE AI IMAGES -->
+          <div class="major-feature-card" id="ai-image-creation">
+            <div class="card-meta">
+              <span class="card-num">01</span>
+              <span class="card-tag">AI IMAGE CREATION</span>
+            </div>
+            <h3 class="card-title">Turn ideas into images.</h3>
+            <p class="card-description">
+              Create high-quality AI images from simple prompts and bring your ideas to life across diverse visual styles.
+            </p>
+
+            <div class="card-visual-box">
+              <img src="assets/cinematic-ai.jpg" alt="AI Generated Cinematic Fantasy Landscape by Slipe AI" class="card-img-preview">
+              <div class="card-prompt-badge">
+                <span class="prompt-icon">✧</span>
+                <span class="prompt-text">“Cinematic mountain landscape, golden hour glow, bioluminescent flora”</span>
+              </div>
+            </div>
+
+            <div class="style-tags-row">
+              <span class="style-tag">Realistic Portrait</span>
+              <span class="style-tag">Profile Photo</span>
+              <span class="style-tag">Cinematic Scene</span>
+              <span class="style-tag">Anime & Cartoon</span>
+              <span class="style-tag">Social Visuals</span>
+            </div>
+
+            <button class="btn btn-primary open-modal-btn">
+              <span>Create images</span>
+            </button>
+          </div>
+
+          <!-- FEATURE CARD 02: AI PHOTO ENHANCEMENT -->
+          <div class="major-feature-card" id="photo-enhancement">
+            <div class="card-meta">
+              <span class="card-num">02</span>
+              <span class="card-tag">PHOTO ENHANCER</span>
+            </div>
+            <h3 class="card-title">Make every photo look better.</h3>
+            <p class="card-description">
+              Enhance image quality, detail and clarity while keeping your photos natural and true to the original.
+            </p>
+
+            <div class="enhancements-pill-grid">
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                <span>Auto Enhance</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/></svg>
+                <span>Precision Upscale</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Creative Detail</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Sharpen</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Natural Skin Texture</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Denoise & Clean</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
+                <span>Remove Dust & Scratches</span>
+              </div>
+              <div class="enhancement-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span>Adjust Lighting & Color</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary open-modal-btn">
+              <span>Enhance a photo</span>
+            </button>
+          </div>
+
+          <!-- FEATURE CARD 03: AI VIDEO ENHANCEMENT -->
+          <div class="major-feature-card" id="video-enhancement">
+            <div class="card-meta">
+              <span class="card-num">03</span>
+              <span class="badge-status">Coming soon</span>
+            </div>
+            <h3 class="card-title">Bring your videos to life.</h3>
+            <p class="card-description">
+              Enhance video quality and make your footage cleaner, sharper and more detailed with AI.
+            </p>
+
+            <div class="video-preview-box">
+              <div class="video-overlay-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+              <span class="video-label">AI Frame Upscaling & De-noising</span>
+            </div>
+
+            <button class="btn btn-secondary disabled-btn" disabled>
+              <span>Enhance video (Coming Soon)</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER INTERACTIVE DEDICATED SECTION -->
+    <section class="comparison-section" id="examples">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">SEE THE DIFFERENCE</div>
+          <h2 class="section-title">Natural detail. Zero plastic smoothing.</h2>
+          <p class="section-description">
+            Drag the slider to compare original photos with Slipe AI enhanced results. Facial identity, hair texture, and natural details remain completely authentic.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="comparison-tabs">
+          <button class="comp-tab active" data-comp="portrait">Portrait</button>
+          <button class="comp-tab" data-comp="low-quality">Low-Quality Photo</button>
+          <button class="comp-tab" data-comp="old-photo">Old Photo</button>
+          <button class="comp-tab" data-comp="outdoor">Outdoor Image</button>
+        </div>
+
+        <!-- Comparison Display Card -->
+        <div class="main-comparison-card" id="main-comp-slider">
+          <div class="comp-layer comp-after">
+            <img src="assets/portrait-enhanced.jpg" alt="Enhanced Photo Result by Slipe AI" id="comp-after-img">
+            <span class="comp-tag tag-after">ENHANCED</span>
+          </div>
+          <div class="comp-layer comp-before" id="main-before-layer">
+            <img src="assets/portrait-enhanced.jpg" alt="Original Photo Input" class="image-original-filter" id="comp-before-img">
+            <span class="comp-tag tag-before">ORIGINAL</span>
+          </div>
+          <div class="comp-handle" id="main-slider-handle">
+            <div class="comp-line"></div>
+            <div class="comp-knob">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </div>
+            <div class="comp-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI IMAGE CREATION GALLERY SECTION -->
+    <section class="gallery-section" id="ai-images">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">AI CREATION GALLERY</div>
+          <h2 class="section-title">Made with Slipe AI</h2>
+          <p class="section-description">
+            Explore images generated directly from text prompts across photography, portraits, artwork, and cinematic scenes.
+          </p>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/portrait-enhanced.jpg" alt="Ultra realistic portrait generated by Slipe AI">
+            <div class="gallery-info">
+              <span class="gallery-style">Realistic Portrait</span>
+              <span class="gallery-prompt">“Natural studio portrait, realistic skin detail, soft amber light”</span>
+            </div>
+          </div>
+
+          <div class="gallery-card gallery-card-tall">
+            <img src="assets/cinematic-ai.jpg" alt="Cinematic landscape created with Slipe AI">
+            <div class="gallery-info">
+              <span class="gallery-style">Cinematic Photography</span>
+              <span class="gallery-prompt">“Atmospheric mountain landscape at sunset, bioluminescent flora”</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="assets/portrait-enhanced.jpg" alt="Professional profile picture created with Slipe AI" style="filter: contrast(1.1) brightness(0.95);">
+            <div class="gallery-info">
+              <span class="gallery-style">Professional Profile Photo</span>
+              <span class="gallery-prompt">“Executive headshot, sharp focus, blurred modern office background”</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="assets/cinematic-ai.jpg" alt="Anime and cartoon style rendering by Slipe AI" style="filter: hue-rotate(40deg);">
+            <div class="gallery-info">
+              <span class="gallery-style">Anime / Cartoon Art</span>
+              <span class="gallery-prompt">“Vibrant anime aesthetic fantasy world, crisp linework and lighting”</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="assets/portrait-enhanced.jpg" alt="Creative artwork portrait by Slipe AI" style="filter: sepia(0.2) contrast(1.05);">
+            <div class="gallery-info">
+              <span class="gallery-style">Lifestyle Photography</span>
+              <span class="gallery-prompt">“Outdoor natural sunlight portrait, bokeh blur, golden hour tint”</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="steps-section" id="how-it-works">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">SIMPLE WORKFLOW</div>
+          <h2 class="section-title">How Slipe AI works.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Choose what you want to create</h3>
+            <p class="step-desc">Select AI Image Creation, Photo Enhancement, or Video Enhancement from the app toolbar.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Upload or describe your image</h3>
+            <p class="step-desc">Upload a photo from your gallery or type a prompt describing the image you want to generate.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Let Slipe AI do the work</h3>
+            <p class="step-desc">Our neural models enhance textures, restore sharpness, or render your creative vision in seconds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SLIPE AI (PHILOSOPHY) -->
+    <section class="philosophy-section">
+      <div class="section-container">
+        <div class="philosophy-card">
+          <div class="section-mono-tag">PRODUCT PHILOSOPHY</div>
+          <h2 class="philosophy-headline">AI that keeps your images looking real.</h2>
+          <blockquote class="philosophy-quote">
+            “Slipe AI is designed to improve your images without losing the details that make them yours.”
           </blockquote>
 
-          <p class="vision-statement">
-            Pace AI is built for people who want to think faster, create more, learn effortlessly, and stay centered in an increasingly noisy digital world.
-          </p>
-
-          <div class="vision-pillars">
-            <div class="vision-item">
-              <span class="vision-dot"></span>
-              <span class="vision-label">Everyday Assistance</span>
+          <div class="philosophy-checklist-grid">
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>Natural-looking results</span>
             </div>
-            <div class="vision-item">
-              <span class="vision-dot"></span>
-              <span class="vision-label">Creative Freedom</span>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>High-quality enhancement</span>
             </div>
-            <div class="vision-item">
-              <span class="vision-dot"></span>
-              <span class="vision-label">Focus & Flow</span>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>Detailed images</span>
+            </div>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>Easy to use</span>
+            </div>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>AI image creation</span>
+            </div>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>Photo enhancement</span>
+            </div>
+            <div class="p-check-item">
+              <span class="p-check">✓</span>
+              <span>Video enhancement</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CLOSING SECTION -->
-    <section class="closing-section" id="closing">
+    <!-- USE CASES SECTION -->
+    <section class="use-cases-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-mono-tag">BUILT FOR EVERYONE</div>
+          <h2 class="section-title">Made for whatever you’re creating.</h2>
+        </div>
+
+        <div class="use-cases-grid">
+          <div class="use-case-box">
+            <h3 class="uc-title">Creators</h3>
+            <p class="uc-desc">Create high-quality visuals and social media assets that stand out instantly.</p>
+          </div>
+
+          <div class="use-case-box">
+            <h3 class="uc-title">Professionals</h3>
+            <p class="uc-desc">Create and enhance professional profile images and headshots for business.</p>
+          </div>
+
+          <div class="use-case-box">
+            <h3 class="uc-title">Photographers</h3>
+            <p class="uc-desc">Improve image quality, recover lost detail, and refine soft lighting naturally.</p>
+          </div>
+
+          <div class="use-case-box">
+            <h3 class="uc-title">Businesses</h3>
+            <p class="uc-desc">Create polished visual content, product imagery, and promotional graphics effortlessly.</p>
+          </div>
+
+          <div class="use-case-box uc-box-wide">
+            <h3 class="uc-title">Everyday Users</h3>
+            <p class="uc-desc">Make everyday photos, family portraits, and memories look cleaner and sharper.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP PROMOTION CTA SECTION -->
+    <section class="app-cta-section">
       <div class="section-container text-center">
-        <div class="closing-box">
-          <div class="closing-glow"></div>
-          <div class="section-mono-tag">GET STARTED</div>
+        <div class="cta-box">
+          <div class="section-mono-tag">GET STARTED WITH SLIPE AI</div>
+          <h2 class="cta-headline">Create better. Enhance anything.</h2>
+          <p class="cta-subhead">Create AI images and transform your photos with Slipe AI.</p>
           
-          <h2 class="closing-headline">Meet Pace AI.</h2>
-          <p class="closing-subhead">Your AI companion for everyday productivity and creativity.</p>
-          
-          <div class="closing-actions">
+          <div class="cta-actions">
             <button class="btn btn-primary btn-large open-modal-btn">
-              <span>Get Pace AI</span>
+              <span>Try Slipe AI</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.33331 8H12.6666M12.6666 8L8.00002 3.33334M12.6666 8L8.00002 12.6667" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
+          </div>
+
+          <div class="app-badges-row">
+            <a href="https://play.google.com/store/apps/details?id=com.paceai.paceai" target="_blank" rel="noopener" class="app-badge-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-1.442V3.256c0-.555.228-1.056.609-1.442zM15.206 13.414l2.766 2.766-12.75 7.361 9.984-10.127zM15.206 10.586L5.222.459l12.75 7.361-2.766 2.766zM19.387 11.233l2.84 1.64c.77.445.77 1.166 0 1.611l-2.84 1.64-2.868-2.868 2.868-2.868z"/>
+              </svg>
+              <span>Get it on Google Play</span>
+            </a>
           </div>
         </div>
       </div>
@@ -472,53 +519,69 @@
     <div class="footer-container">
       <div class="footer-brand">
         <a href="#" class="brand-logo">
-          <img src="assets/logo.png" alt="Pace AI Logo" class="footer-logo-img">
-          <span class="brand-name">Pace <span class="brand-accent">AI</span></span>
+          <img src="assets/logo.png" alt="Slipe AI Logo" class="footer-logo-img">
+          <span class="brand-name">Slipe <span class="brand-accent">AI</span></span>
         </a>
-        <p class="footer-tagline">Your AI companion for everyday productivity and creativity.</p>
+        <p class="footer-tagline">Create. Enhance. Transform.</p>
       </div>
 
-      <div class="footer-links">
-        <a href="privacy.html" class="footer-link">Privacy Policy</a>
-        <a href="mailto:sreerag@paceai.in" class="footer-link">Support</a>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4 class="col-title">Product</h4>
+          <a href="#features">Features</a>
+          <a href="#ai-images">AI Images</a>
+          <a href="#photo-enhancement">Photo Enhancement</a>
+          <a href="#video-enhancement">Video Enhancement</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="col-title">Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="delete-account.html">Account & Data Deletion</a>
+          <a href="privacy.html#terms">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="col-title">Contact</h4>
+          <a href="mailto:paceai.support@gmail.com">Support Email</a>
+          <a href="mailto:sreerag@paceai.in">Developer Contact</a>
+        </div>
       </div>
 
       <div class="footer-copyright">
-        &copy; <span id="year">2026</span> Paceaitechnologies (OPC) Private Limited. All rights reserved.
+        &copy; <span id="year">2026</span> Slipe AI. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <!-- GET PACE AI MODAL -->
+  <!-- TRY SLIPE AI MODAL -->
   <div class="modal-backdrop" id="modal-backdrop">
     <div class="modal-card">
       <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
       
       <div class="modal-body" id="modal-form-view">
         <div class="modal-logo-wrap">
-          <img src="assets/logo.png" alt="Pace AI Logo" class="modal-logo-img">
+          <img src="assets/logo.png" alt="Slipe AI Logo" class="modal-logo-img">
         </div>
-        <div class="section-mono-tag">EARLY ACCESS</div>
-        <h3 class="modal-title">Get Pace AI</h3>
-        <p class="modal-text">Join the priority roster to get instant access to the all-in-one AI companion for your everyday life.</p>
+        <div class="section-mono-tag">GET STARTED</div>
+        <h3 class="modal-title">Try Slipe AI</h3>
+        <p class="modal-text">Join the early access list to start creating AI images and enhancing your photos with Slipe AI.</p>
         
         <form id="access-form" class="modal-form">
           <div class="input-group">
             <input type="email" id="email-input" class="modal-input" placeholder="Enter your email address" required>
             <button type="submit" class="btn btn-primary btn-input">
-              <span>Get Pace AI</span>
+              <span>Try Slipe AI</span>
             </button>
           </div>
-          <span class="input-hint">No spam. Only early access invitations and updates.</span>
+          <span class="input-hint">No spam. Get early access links and app updates.</span>
         </form>
       </div>
 
       <div class="modal-body hidden" id="modal-success-view">
         <div class="success-icon-wrap">
-          <img src="assets/logo.png" alt="Pace AI Logo" class="success-logo-img">
+          <img src="assets/logo.png" alt="Slipe AI Logo" class="success-logo-img">
         </div>
-        <h3 class="modal-title">Welcome to Pace AI</h3>
-        <p class="modal-text">You're on the early access roster. We'll send your access link directly to your inbox.</p>
+        <h3 class="modal-title">Welcome to Slipe AI</h3>
+        <p class="modal-text">You're on the early roster! We'll send your download link directly to your email.</p>
         <button class="btn btn-secondary btn-full" id="modal-done-btn">Back to Website</button>
       </div>
     </div>

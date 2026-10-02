@@ -1,75 +1,12 @@
 /**
- * Pace AI — Interactive Frontend Logic
- * Canvas Sine-Wave Animation, Focus Mode Rhythms, Modal Handler, and Scroll Triggers
+ * Slipe AI — Interactive Frontend Logic
+ * Before/After Sliders, Comparison Tab Filter, Mobile Drawer & Modal Handlers
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   /* -------------------------------------------------------------------------- */
-  /* 1. HERO HARMONIC CANVAS ANIMATION                                          */
-  /* -------------------------------------------------------------------------- */
-  const canvas = document.getElementById('hero-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width, height;
-    let mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
-    let time = 0;
-
-    function resizeCanvas() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    window.addEventListener('mousemove', (e) => {
-      mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 2;
-      mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 2;
-    });
-
-    function drawWave(yOffset, frequency, amplitude, speed, color, lineWidth) {
-      ctx.beginPath();
-      ctx.lineWidth = lineWidth;
-      ctx.strokeStyle = color;
-
-      for (let x = 0; x < width; x += 4) {
-        const mouseDist = Math.sin((x / width) * Math.PI);
-        const y = yOffset + 
-          Math.sin(x * frequency + time * speed) * amplitude + 
-          mouse.x * 30 * mouseDist;
-
-        if (x === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-      }
-      ctx.stroke();
-    }
-
-    function renderCanvas() {
-      ctx.clearRect(0, 0, width, height);
-      time += 0.015;
-
-      mouse.x += (mouse.targetX - mouse.x) * 0.05;
-      mouse.y += (mouse.targetY - mouse.y) * 0.05;
-
-      const centerY = height * 0.45;
-
-      // Layered electric blue & amber pace waves for light mode
-      drawWave(centerY, 0.003, 40, 0.8, 'rgba(0, 102, 255, 0.25)', 2);
-      drawWave(centerY + 30, 0.002, 60, 0.6, 'rgba(217, 119, 6, 0.18)', 1.5);
-      drawWave(centerY - 20, 0.004, 30, 1.1, 'rgba(15, 23, 42, 0.1)', 1);
-
-      requestAnimationFrame(renderCanvas);
-    }
-
-    renderCanvas();
-  }
-
-  /* -------------------------------------------------------------------------- */
-  /* 2. HEADER SCROLL EFFECT                                                    */
+  /* 1. HEADER SCROLL EFFECT                                                    */
   /* -------------------------------------------------------------------------- */
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
@@ -81,53 +18,112 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* -------------------------------------------------------------------------- */
-  /* 3. FOCUS MODE RHYTHMS INTERACTIVE SELECTOR                                 */
+  /* 2. MOBILE MENU TOGGLE                                                      */
   /* -------------------------------------------------------------------------- */
-  const rhythmChips = document.querySelectorAll('.rhythm-chip');
-  const timerValue = document.querySelector('.timer-value');
-  const timerLabel = document.querySelector('.timer-label');
-  const focusProgress = document.querySelector('.focus-progress');
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
 
-  const focusPresets = {
-    'Deep Work Flow': { time: '25:00', label: 'FOCUS SESSION ACTIVE', progress: '75%' },
-    'Mindful Relaxation': { time: '05:00', label: 'RELAXATION & BREATHING', progress: '30%' },
-    'App Blocker Active': { time: '45:00', label: 'APP BLOCKER ACTIVE · APPS BLOCKED ON YOUR TIME', progress: '90%' }
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('active');
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /* 3. INTERACTIVE HERO BEFORE/AFTER SLIDER                                     */
+  /* -------------------------------------------------------------------------- */
+  function initBeforeAfterSlider(containerId, beforeLayerId, handleId) {
+    const container = document.getElementById(containerId);
+    const beforeLayer = document.getElementById(beforeLayerId);
+    const handle = document.getElementById(handleId);
+
+    if (!container || !beforeLayer || !handle) return;
+
+    let isDragging = false;
+
+    function setPosition(x) {
+      const rect = container.getBoundingClientRect();
+      let offsetX = x - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+
+      const percentage = (offsetX / rect.width) * 100;
+      beforeLayer.style.width = `${percentage}%`;
+      handle.style.left = `${percentage}%`;
+    }
+
+    function onPointerDown(e) {
+      isDragging = true;
+      setPosition(e.clientX || (e.touches && e.touches[0].clientX));
+    }
+
+    function onPointerMove(e) {
+      if (!isDragging) return;
+      setPosition(e.clientX || (e.touches && e.touches[0].clientX));
+    }
+
+    function onPointerUp() {
+      isDragging = false;
+    }
+
+    container.addEventListener('mousedown', onPointerDown);
+    window.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
+
+    container.addEventListener('touchstart', onPointerDown);
+    window.addEventListener('touchmove', onPointerMove);
+    window.addEventListener('touchend', onPointerUp);
+  }
+
+  // Initialize Hero Slider
+  initBeforeAfterSlider('hero-slider-card', 'hero-before-layer', 'hero-slider-handle');
+
+  // Initialize Comparison Section Slider
+  initBeforeAfterSlider('main-comp-slider', 'main-before-layer', 'main-slider-handle');
+
+  /* -------------------------------------------------------------------------- */
+  /* 4. COMPARISON SECTION TABS & SAMPLES                                       */
+  /* -------------------------------------------------------------------------- */
+  const compTabs = document.querySelectorAll('.comp-tab');
+  const compBeforeImg = document.getElementById('comp-before-img');
+  const compAfterImg = document.getElementById('comp-after-img');
+
+  const compSamples = {
+    'portrait': {
+      after: 'assets/portrait-enhanced.jpg',
+      filter: 'blur(2.5px) contrast(0.92) brightness(0.92)'
+    },
+    'low-quality': {
+      after: 'assets/portrait-enhanced.jpg',
+      filter: 'blur(4px) contrast(0.8) brightness(0.9) saturate(0.8)'
+    },
+    'old-photo': {
+      after: 'assets/portrait-enhanced.jpg',
+      filter: 'sepia(0.5) blur(2px) contrast(0.85) brightness(0.9)'
+    },
+    'outdoor': {
+      after: 'assets/cinematic-ai.jpg',
+      filter: 'blur(3px) contrast(0.88) brightness(0.92)'
+    }
   };
 
-  rhythmChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      rhythmChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-
-      const modeName = chip.querySelector('span:last-child').textContent.trim();
-      if (focusPresets[modeName]) {
-        if (timerValue) timerValue.textContent = focusPresets[modeName].time;
-        if (timerLabel) timerLabel.textContent = focusPresets[modeName].label;
-        if (focusProgress) focusProgress.style.width = focusPresets[modeName].progress;
-      }
-    });
-  });
-
-  /* -------------------------------------------------------------------------- */
-  /* 4. PHILOSOPHY INTERACTIVE SWITCH TABS                                      */
-  /* -------------------------------------------------------------------------- */
-  const switchTabs = document.querySelectorAll('.switch-tab');
-  const switchContents = document.querySelectorAll('.switch-content');
-
-  switchTabs.forEach(tab => {
+  compTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const targetTab = tab.dataset.tab;
-
-      switchTabs.forEach(t => t.classList.remove('active'));
+      compTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      switchContents.forEach(content => {
-        if (content.id === `tab-${targetTab}`) {
-          content.classList.add('active');
-        } else {
-          content.classList.remove('active');
-        }
-      });
+      const target = tab.dataset.comp;
+      if (compSamples[target] && compBeforeImg && compAfterImg) {
+        compAfterImg.src = compSamples[target].after;
+        compBeforeImg.src = compSamples[target].after;
+        compBeforeImg.style.filter = compSamples[target].filter;
+      }
     });
   });
 
@@ -177,9 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------------------- */
-  /* 6. INTERSECTION OBSERVER FOR SCROLL REVEAL                                 */
+  /* 6. INTERSECTION OBSERVER FOR FADE-IN REVEALS                              */
   /* -------------------------------------------------------------------------- */
-  const revealElements = document.querySelectorAll('.pillar-card, .feature-box, .focus-banner, .why-grid, .vision-banner, .closing-box');
+  const revealElements = document.querySelectorAll('.major-feature-card, .gallery-card, .step-card, .use-case-box, .philosophy-card, .cta-box');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -190,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.15
+    threshold: 0.12
   });
 
   revealElements.forEach(el => {
